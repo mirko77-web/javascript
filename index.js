@@ -92,7 +92,7 @@ switch (category) {
 
 let numeri = [10, 20, 30, 40, 50];
 console.log(numeri);
-*/
+
 
 let numeri = [10, 20, 30, 40, 50];
 
@@ -103,3 +103,18 @@ for (let i = 0; i < numeri.length; i++) {
 }
 
 console.log(`La somma dei numeri contenuti nell'array è: ${somma}`);
+*/
+
+let numeri = [10, 20, 30, 40, 50];
+
+let numeriInvertiti = [];
+
+
+for (let i = numeri.length - 1; i >= 0; i--) {
+  numeriInvertiti.push(numeri[i]); 
+}
+
+
+console.log("Array originale:", numeri);
+
+console.log("Array invertito:", numeriInvertiti);
