@@ -43,7 +43,7 @@ while (numero >= 1) {
 }
 
  let word = "ciao";
- console.log (word.length)  */
+ console.log (word.length)  
 
 
 let number = 7; 
@@ -52,4 +52,20 @@ if (number > 5) {
   console.log("La variabile è maggiore di 5");
 } else {
   console.log("La variabile è minore o uguale a 5");
+}*/
+
+
+const prompt = require('prompt-sync')();
+let score = parseInt(prompt("89"));
+
+if (score >= 90 && score <= 100) {
+  console.log("Voto ottimo");
+} else if (score >= 70 && score <= 89) {
+  console.log("Voto buono");
+} else if (score >= 60 && score <= 69) {
+  console.log("Voto sufficiente");
+} else if (score <= 59) {
+  console.log("Voto insufficiente");
+} else {
+  console.log("Valore non valido"); 
 }
