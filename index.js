@@ -42,4 +42,5 @@ while (numero >= 1) {
   numero -= 2; 
 }
   */
- let word = prompt (ciao)
+ let word = "ciao";
+ console.log (word.length)
