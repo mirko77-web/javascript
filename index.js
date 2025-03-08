@@ -41,6 +41,15 @@ while (numero >= 1) {
   console.log(numero); 
   numero -= 2; 
 }
-  */
+
  let word = "ciao";
- console.log (word.length)
+ console.log (word.length)  */
+
+
+let number = 7; 
+
+if (number > 5) {
+  console.log("La variabile è maggiore di 5");
+} else {
+  console.log("La variabile è minore o uguale a 5");
+}
