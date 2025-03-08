@@ -26,10 +26,18 @@ let outside = 12
     console.log (23)
 }
 console.log (12)
-console.log (23)*/
+console.log (23)
 
 
 for (let i = 0; i <= 20; i += 2) {
     console.log(i); 
   }
+  */
+
   
+let numero = 9; 
+
+while (numero >= 1) {
+  console.log(numero); 
+  numero -= 2; 
+}
