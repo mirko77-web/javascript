@@ -69,7 +69,7 @@ if (score >= 90 && score <= 100) {
 } else {
   console.log("Valore non valido"); 
 }
-*/
+
 
 switch (category) {
   case 'ottimo':
@@ -88,3 +88,7 @@ switch (category) {
     console.log("Valore non valido");
     break;
 }
+*/
+
+let numeri = [10, 20, 30, 40, 50];
+console.log(numeri);
