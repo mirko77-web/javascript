@@ -16,7 +16,7 @@ let number = 7
 {let number = 10
     console.log (number)
 }
-console.log (number)*/
+console.log (number)
 
 
 
@@ -26,4 +26,10 @@ let outside = 12
     console.log (23)
 }
 console.log (12)
-console.log (23)
+console.log (23)*/
+
+
+for (let i = 0; i <= 20; i += 2) {
+    console.log(i); 
+  }
+  
