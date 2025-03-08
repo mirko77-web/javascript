@@ -103,7 +103,7 @@ for (let i = 0; i < numeri.length; i++) {
 }
 
 console.log(`La somma dei numeri contenuti nell'array è: ${somma}`);
-*/
+
 
 let numeri = [10, 20, 30, 40, 50];
 
@@ -118,3 +118,13 @@ for (let i = numeri.length - 1; i >= 0; i--) {
 console.log("Array originale:", numeri);
 
 console.log("Array invertito:", numeriInvertiti);
+*/
+
+let person = {
+    name: "Mirko",
+    age: 31,
+    city: "Lecce"
+  };
+
+  console.log(person);
+  
