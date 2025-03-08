@@ -88,7 +88,18 @@ switch (category) {
     console.log("Valore non valido");
     break;
 }
-*/
+
 
 let numeri = [10, 20, 30, 40, 50];
 console.log(numeri);
+*/
+
+let numeri = [10, 20, 30, 40, 50];
+
+let somma = 0;
+
+for (let i = 0; i < numeri.length; i++) {
+  somma += numeri[i];
+}
+
+console.log(`La somma dei numeri contenuti nell'array è: ${somma}`);
