@@ -52,7 +52,7 @@ if (number > 5) {
   console.log("La variabile è maggiore di 5");
 } else {
   console.log("La variabile è minore o uguale a 5");
-}*/
+}
 
 
 const prompt = require('prompt-sync')();
@@ -68,4 +68,23 @@ if (score >= 90 && score <= 100) {
   console.log("Voto insufficiente");
 } else {
   console.log("Valore non valido"); 
+}
+*/
+
+switch (category) {
+  case 'ottimo':
+    console.log("Voto ottimo");
+    break;
+  case 'buono':
+    console.log("Voto buono");
+    break;
+  case 'sufficiente':
+    console.log("Voto sufficiente");
+    break;
+  case 'insufficiente':
+    console.log("Voto insufficiente");
+    break;
+  default:
+    console.log("Valore non valido");
+    break;
 }
