@@ -193,7 +193,7 @@ let student = {
   let chiavi = Object.keys(student);
 
   console.log(chiavi);
-  */
+  
   let student = {
     name: "mirko",
     age: 31,
@@ -202,3 +202,18 @@ let student = {
   };
 let valori = Object.values(student);
 console.log(valori)
+*/
+let student = {
+    name: "mirko",
+    age: 31,
+    grade: "10th",
+    school: "tecnico informatico"
+  };
+
+let coppie = Object.entries(student);
+
+console.log(coppie);
+
+coppie.forEach(([chiave, valore]) => {
+  console.log(`${chiave}: ${valore}`);
+});
