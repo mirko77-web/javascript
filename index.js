@@ -118,13 +118,15 @@ for (let i = numeri.length - 1; i >= 0; i--) {
 console.log("Array originale:", numeri);
 
 console.log("Array invertito:", numeriInvertiti);
+
 */
+
 
 let person = {
     name: "Mirko",
     age: 31,
-    city: "Lecce"
+    city: "lecce"
   };
-
-  console.log(person);
+  
+  console.log(person.age)
   
