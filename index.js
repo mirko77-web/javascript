@@ -139,8 +139,7 @@ let person = {
   person.age = 35;
   
   console.log(person.age);
-    */
-
+   
   
  let person = {
     name: "Mirko",
@@ -149,4 +148,16 @@ let person = {
   };
 
 person.job = "developer";
-console.log(person.
+console.log(person.)
+ */
+
+
+let person = {
+    name: "Mirko",
+    age: 31,
+    city: "lecce"
+  };
+
+for (let proprietà in person) {
+    console.log(`Proprietà: ${proprietà}, Valore: ${person[proprietà]}`);
+  }
