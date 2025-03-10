@@ -119,7 +119,7 @@ console.log("Array originale:", numeri);
 
 console.log("Array invertito:", numeriInvertiti);
 
-*/
+
 
 
 let person = {
@@ -129,4 +129,17 @@ let person = {
   };
   
   console.log(person.age)
+  */
+ // Oggetto "person"
+ let person = {
+    name: "Mirko",
+    age: 31,
+    city: "lecce"
+  };
+  
+  
+  
+  person.age = 35;
+  
+  console.log(person.age);
   
