@@ -149,7 +149,7 @@ let person = {
 
 person.job = "developer";
 console.log(person.)
- */
+
 
 
 let person = {
@@ -160,4 +160,12 @@ let person = {
 
 for (let proprietà in person) {
     console.log(`Proprietà: ${proprietà}, Valore: ${person[proprietà]}`);
+  } */
+ 
+function outerFunction(x) {
+
+    function innerFunction(y) {
+      return x + y;
+    }
+    return innerFunction;
   }
