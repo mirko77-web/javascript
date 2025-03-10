@@ -160,7 +160,7 @@ let person = {
 
 for (let proprietà in person) {
     console.log(`Proprietà: ${proprietà}, Valore: ${person[proprietà]}`);
-  } */
+  } 
  
 function outerFunction(x) {
 
@@ -168,4 +168,17 @@ function outerFunction(x) {
       return x + y;
     }
     return innerFunction;
-  }
+  }*/
+    function createCounter() {
+        let count = 0;
+        return {
+          increment: function() {
+            count += 1; 
+            return count; 
+          },
+          decrement: function() {
+            count -= 1; 
+            return count; 
+          }
+        };
+      }
