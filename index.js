@@ -129,17 +129,24 @@ let person = {
   };
   
   console.log(person.age)
-  */
- // Oggetto "person"
+
+
  let person = {
     name: "Mirko",
     age: 31,
     city: "lecce"
   };
-  
-  
-  
   person.age = 35;
   
   console.log(person.age);
+    */
+
   
+ let person = {
+    name: "Mirko",
+    age: 31,
+    city: "lecce"
+  };
+
+person.job = "developer";
+console.log(person.
