@@ -168,7 +168,7 @@ function outerFunction(x) {
       return x + y;
     }
     return innerFunction;
-  }*/
+  }
     function createCounter() {
         let count = 0;
         return {
@@ -181,4 +181,16 @@ function outerFunction(x) {
             return count; 
           }
         };
-      }
+      }*/
+     // Creazione dell'oggetto "student"
+let student = {
+    name: "mirko",
+    age: 31,
+    grade: "10th",
+    school: "tecnico informatico"
+  };
+  
+  let chiavi = Object.keys(student);
+
+  console.log(chiavi);
+  
