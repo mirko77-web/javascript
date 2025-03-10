@@ -181,8 +181,8 @@ function outerFunction(x) {
             return count; 
           }
         };
-      }*/
-     // Creazione dell'oggetto "student"
+      }
+   
 let student = {
     name: "mirko",
     age: 31,
@@ -193,4 +193,12 @@ let student = {
   let chiavi = Object.keys(student);
 
   console.log(chiavi);
-  
+  */
+  let student = {
+    name: "mirko",
+    age: 31,
+    grade: "10th",
+    school: "tecnico informatico"
+  };
+let valori = Object.values(student);
+console.log(valori)
