@@ -217,14 +217,14 @@ console.log(coppie);
 coppie.forEach(([chiave, valore]) => {
   console.log(`${chiave}: ${valore}`);
 });
-
+*/
 
 let parola = ""
 do {
   parola = prompt("inserisci una parola")
 
 } while (parola.length < 5)
-*/
+
 let parole =  [];
 for (let i = 1; i <= 5; i++){
   let parola = prompt (" inserisci una parola")
