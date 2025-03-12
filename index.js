@@ -235,8 +235,8 @@ console.log (parole)
 
 console.log("Parole con un numero dispari di lettere:");
 for (let i = 0; i < parole.length; i++) {
-  if (parole[i].length % 2 !== 0) { // Controlla se la lunghezza è dispari
-    console.log(parole[i]); // Stampa la parola
+  if (parole[i].length % 2 !== 0) { 
+    console.log(parole[i]); 
   }
 }
 
@@ -268,7 +268,6 @@ const failedStudent = students.find(student => student.grade < 60);
 
 console.log("Studenti promossi:", passedStudents);
 console.log("Primo studente bocciato:", failedStudent);
-  */
 
 
 
@@ -281,4 +280,22 @@ const words = ["banana", "apple", "cherry", "date"];
 const sortedWords = words.sort();
 
 console.log("Somma totale delle spese:", totalExpenses);
-console.log("Array delle parole ordinate:", sortedWords); 
+console.log("Array delle parole ordinate:", sortedWords);   */
+
+class Automobile {
+  constructor(marca, modello, anno) {
+    this.marca = jeep;    
+    this.modello = renegade; 
+    this.anno = 2016;    
+  }
+
+ 
+  descrizione() {
+    return `Questa è una ${this.jeep} ${this.renegade} del ${this.2016}.`;
+  }
+}
+
+
+const miaAuto = new Automobile("jeep", "renegade", 2016);
+console.log(miaAuto.descrizione()); Output: questa è una jeep renegade del 2016.
+
