@@ -217,7 +217,7 @@ console.log(coppie);
 coppie.forEach(([chiave, valore]) => {
   console.log(`${chiave}: ${valore}`);
 });
-*/
+
 
 let parola = ""
 do {
@@ -239,3 +239,13 @@ for (let i = 0; i < parole.length; i++) {
     console.log(parole[i]); // Stampa la parola
   }
 }
+  */
+
+let numbers = [1,2,3,4,5]
+console.log("numeri moltiplicati per due");
+numbers.forEach((numero) =>{
+  console.log (numero * 2)
+})
+
+let squaredNumbers = numbers.map ((numero)=> numero ** 2);
+console.log("Array dei quadrati dei numeri:", squaredNumbers);
