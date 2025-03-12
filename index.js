@@ -249,7 +249,7 @@ numbers.forEach((numero) =>{
 
 let squaredNumbers = numbers.map ((numero)=> numero ** 2);
 console.log("Array dei quadrati dei numeri:", squaredNumbers);
-  */
+
 
 
 const students = [
@@ -268,3 +268,17 @@ const failedStudent = students.find(student => student.grade < 60);
 
 console.log("Studenti promossi:", passedStudents);
 console.log("Primo studente bocciato:", failedStudent);
+  */
+
+
+
+const expenses = [100, 250, 75, 150, 300];
+
+const totalExpenses = expenses.reduce((acc, curr) => acc + curr, 0);
+
+const words = ["banana", "apple", "cherry", "date"];
+
+const sortedWords = words.sort();
+
+console.log("Somma totale delle spese:", totalExpenses);
+console.log("Array delle parole ordinate:", sortedWords); 
