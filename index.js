@@ -202,7 +202,7 @@ let student = {
   };
 let valori = Object.values(student);
 console.log(valori)
-*/
+
 let student = {
     name: "mirko",
     age: 31,
@@ -217,3 +217,25 @@ console.log(coppie);
 coppie.forEach(([chiave, valore]) => {
   console.log(`${chiave}: ${valore}`);
 });
+
+
+let parola = ""
+do {
+  parola = prompt("inserisci una parola")
+
+} while (parola.length < 5)
+*/
+let parole =  [];
+for (let i = 1; i <= 5; i++){
+  let parola = prompt (" inserisci una parola")
+  parole.push(parola)
+}
+console.log (parole)
+
+
+console.log("Parole con un numero dispari di lettere:");
+for (let i = 0; i < parole.length; i++) {
+  if (parole[i].length % 2 !== 0) { // Controlla se la lunghezza è dispari
+    console.log(parole[i]); // Stampa la parola
+  }
+}
