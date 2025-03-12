@@ -239,7 +239,7 @@ for (let i = 0; i < parole.length; i++) {
     console.log(parole[i]); // Stampa la parola
   }
 }
-  */
+
 
 let numbers = [1,2,3,4,5]
 console.log("numeri moltiplicati per due");
@@ -249,3 +249,22 @@ numbers.forEach((numero) =>{
 
 let squaredNumbers = numbers.map ((numero)=> numero ** 2);
 console.log("Array dei quadrati dei numeri:", squaredNumbers);
+  */
+
+
+const students = [
+  { name: "Alice", grade: 85 },
+  { name: "Bob", grade: 45 },
+  { name: "mario", grade: 70 },
+  { name: "Franco", grade: 90 },
+  { name: "Gino", grade: 55 }
+];
+
+const passedStudents = students.filter(student => student.grade >= 60);
+
+
+const failedStudent = students.find(student => student.grade < 60);
+
+
+console.log("Studenti promossi:", passedStudents);
+console.log("Primo studente bocciato:", failedStudent);
