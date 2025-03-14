@@ -288,6 +288,7 @@ class Automobile {
     this.modello = modello;
     this.anno = anno;
     this.chilometraggio = chilometraggio;
+   
 
   }
   descrizione() {
@@ -303,9 +304,6 @@ class Automobile {
   }
 
 }
-
- 
-
 const miaAuto = new Automobile("jeep", "renegade", 2016 , 1000);
 console.log(miaAuto.descrizione());
 miaAuto.aggiungichilometri(50);
@@ -313,3 +311,27 @@ miaAuto.aggiungichilometri(50);
 console.log (miaAuto.mostrachilometri ()) 
 
 
+  class Elettrica extends Automobile {
+    constructor(marca, modello, anno, chilometraggio, autonomia = 0) {
+      super(marca, modello, anno, chilometraggio); 
+      this.autonomia = autonomia;
+    }
+  
+    descrizione() {
+      return `Questa è una ${this.marca} ${this.modello} del ${this.anno}, con un'autonomia di ${this.autonomia} km.`;
+    }
+  
+    ricarica(km) {
+      km > 0 && (this.autonomia += km);
+    }
+  } 
+  Automobile.prototype.saluta = function () {
+    return `Ciao! Questa è una fantastica ${this.marca} ${this.modello}.`;
+  };
+  // Verifica: Creazione di un'istanza della classe Automobile
+const miaAuto = new Automobile("jeep", "renegade", 2016);
+console.log(miaAuto.saluta()); // Output: Ciao! Questa è una fantastica jeep.
+
+
+const miaAutoElettrica = new Elettrica("jeep", "renegade", 2016, 1050, 400);
+console.log(miaAutoElettrica.saluta)
