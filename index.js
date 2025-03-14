@@ -283,19 +283,33 @@ console.log("Somma totale delle spese:", totalExpenses);
 console.log("Array delle parole ordinate:", sortedWords);   */
 
 class Automobile {
-  constructor(marca, modello, anno) {
-    this.marca = jeep;    
-    this.modello = renegade; 
-    this.anno = 2016;    
+  constructor(marca, modello, anno, chilometraggio) {
+    this.marca = marca;
+    this.modello = modello;
+    this.anno = anno;
+    this.chilometraggio = chilometraggio;
+
+  }
+  descrizione() {
+    return `Questa è una ${this.marca} ${this.modello} del ${this.anno}.`;
+  }
+  aggiungichilometri(km){
+    this.chilometraggio += km;
+  
+  } 
+  mostrachilometri (){
+    return this.chilometraggio
+
   }
 
- 
-  descrizione() {
-    return `Questa è una ${this.jeep} ${this.renegade} del ${this.2016}.`;
-  }
 }
 
+ 
 
-const miaAuto = new Automobile("jeep", "renegade", 2016);
-console.log(miaAuto.descrizione()); Output: questa è una jeep renegade del 2016.
+const miaAuto = new Automobile("jeep", "renegade", 2016 , 1000);
+console.log(miaAuto.descrizione());
+miaAuto.aggiungichilometri(50);
+
+console.log (miaAuto.mostrachilometri ()) 
+
 
