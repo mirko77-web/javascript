@@ -280,8 +280,8 @@ const words = ["banana", "apple", "cherry", "date"];
 const sortedWords = words.sort();
 
 console.log("Somma totale delle spese:", totalExpenses);
-console.log("Array delle parole ordinate:", sortedWords);   */
-
+console.log("Array delle parole ordinate:", sortedWords);   
+*/
 class Automobile {
   constructor(marca, modello, anno, chilometraggio) {
     this.marca = marca;
@@ -311,6 +311,7 @@ miaAuto.aggiungichilometri(50);
 console.log (miaAuto.mostrachilometri ()) 
 
 
+ 
   class Elettrica extends Automobile {
     constructor(marca, modello, anno, chilometraggio, autonomia = 0) {
       super(marca, modello, anno, chilometraggio); 
@@ -326,12 +327,15 @@ console.log (miaAuto.mostrachilometri ())
     }
   } 
   Automobile.prototype.saluta = function () {
-    return `Ciao! Questa è una fantastica ${this.marca} ${this.modello}.`;
+    return `Ciao! Questa è una fantastica ${this.marca} ${this.modello}.`
   };
-  // Verifica: Creazione di un'istanza della classe Automobile
-const miaAuto = new Automobile("jeep", "renegade", 2016);
-console.log(miaAuto.saluta()); // Output: Ciao! Questa è una fantastica jeep.
 
 
-const miaAutoElettrica = new Elettrica("jeep", "renegade", 2016, 1050, 400);
-console.log(miaAutoElettrica.saluta)
+const annoCorrente = new Date().getFullYear();
+
+const annoProduzione = 2016;
+
+
+const etaAutomobile = annoCorrente - annoProduzione;
+
+console.log(`L'età dell'automobile è ${etaAutomobile} anni.`);
