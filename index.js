@@ -288,7 +288,7 @@ class Automobile {
     this.modello = modello;
     this.anno = anno;
     this.chilometraggio = chilometraggio;
-   
+    this.#contatoreChiamate = 0;
 
   }
   descrizione() {
@@ -338,12 +338,24 @@ const annoProduzione = 2016;
 
 const etaAutomobile = annoCorrente - annoProduzione;
 
-console.log(`L'età dell'automobile è ${etaAutomobile} anni.`); 
+console.log(`L'età dell'automobile è ${etaAutomobile} anni.`)
 
 
-  _controllaChilometri() {
-    const limite = 100000; 
-    return this.chilometraggio > limite
-      ? `Attenzione: Il chilometraggio (${this.chilometraggio} km) ha superato il limite di ${limite} km!`
-      : `Il chilometraggio (${this.chilometraggio} km) è sotto il limite di ${limite} km.`;
+  controllaChilometri () {
+
   }
+
+#contatoreChiamate;
+
+#incrementaContatore() {
+  this.#contatoreChiamate += 1;
+}
+
+getContatoreChiamate() {
+  return this.#contatoreChiamate;
+}
+
+descrizione() {
+  this.#incrementaContatore(); 
+  return `Questa è una ${this.marca} ${this.modello} del ${this.anno}.`;
+}
