@@ -311,6 +311,8 @@ miaAuto.aggiungichilometri(50);
 console.log (miaAuto.mostrachilometri ()) 
 
 
+
+
  
   class Elettrica extends Automobile {
     constructor(marca, modello, anno, chilometraggio, autonomia = 0) {
@@ -358,4 +360,14 @@ getContatoreChiamate() {
 descrizione() {
   this.#incrementaContatore(); 
   return `Questa è una ${this.marca} ${this.modello} del ${this.anno}.`;
+}
+
+
+aggiungiChilometri(km) {
+  if (km > 0) {
+    this.chilometraggio += km; 
+    console.log(`Sono stati aggiunti ${km} km. Chilometraggio aggiornato: ${this.chilometraggio} km.`);
+  } else {
+    console.log("Errore: i chilometri aggiunti devono essere un valore positivo.");
+  }
 }
