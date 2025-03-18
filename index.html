@@ -6,11 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Benvenuto nel Progetto Automobili</h1>
-    <p>chilometri auto sono</p>
-    
-    <div id="risultato"></div>
+    <h1>Gestione Chilometraggio</h1>
+    <form id="chilometriForm">
+        <label for="chilometri">Aggiungi Chilometri:</label>
+        <input type="number" id="chilometri" placeholder="Inserisci chilometri" required>
+        <button type="submit">Aggiungi</button>
+    </form>
 
+    <div class="output">
+        <p id="descrizioneAuto"></p>
+        <p id="chilometraggioCorrente"></p>
+        <p id="contatoreChiamate"></p>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

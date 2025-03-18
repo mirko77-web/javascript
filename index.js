@@ -281,7 +281,7 @@ const sortedWords = words.sort();
 
 console.log("Somma totale delle spese:", totalExpenses);
 console.log("Array delle parole ordinate:", sortedWords);   
-*/
+
 class Automobile {
   constructor(marca, modello, anno, chilometraggio) {
     this.marca = marca;
@@ -347,7 +347,9 @@ console.log(`L'età dell'automobile è ${etaAutomobile} anni.`)
 
   }
 
-#contatoreChiamate;
+#contatoreChiamate() {
+
+};
 
 #incrementaContatore() {
   this.#contatoreChiamate += 1;
@@ -371,3 +373,48 @@ aggiungiChilometri(km) {
     console.log("Errore: i chilometri aggiunti devono essere un valore positivo.");
   }
 }
+mostraContatoreChiamate() {
+  return `Il metodo aggiungiChilometri è stato chiamato ${this.#contatoreChiamate} volte.`;
+}
+
+get chilometraggio() {
+  return this._chilometraggio;
+}
+*/
+
+
+class Automobile {
+  
+  constructor(marca, modello, anno, chilometraggio = 0) {
+    this.marca = marca;
+    this.modello = modello;          
+    this.anno = anno;                
+    this._chilometraggio = chilometraggio; 
+    this.#contatoreChiamate = 0;     
+  }
+
+  
+  #contatoreChiamate;
+
+  
+  #incrementaContatore() {
+    this.#contatoreChiamate++; 
+  }
+
+  
+  
+  get chilometraggio() {
+    return this._chilometraggio; 
+  }
+
+  
+  mostraContatoreChiamate() {
+    return `Il metodo aggiungiChilometri è stato chiamato ${this.#contatoreChiamate} volte.`; 
+  }
+
+  
+  descrizione() {
+    return `Questa è una ${this.marca} ${this.modello} del ${this.anno}. Chilometraggio attuale: ${this._chilometraggio} km.`;
+  }
+}
+
