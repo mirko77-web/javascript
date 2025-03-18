@@ -418,3 +418,53 @@ class Automobile {
   }
 }
 
+class Automobile {
+  constructor() {
+    this.#contatoreChiamate = 0; 
+  }
+
+  #contatoreChiamate; 
+
+  #incrementaContatore() {
+    this.#contatoreChiamate++; 
+  }
+
+  aggiungiChilometri(km) {
+    if (km > 0) {
+      this.#incrementaContatore(); 
+      console.log(`Chilometri aggiunti: ${km}`);
+    } else {
+      console.log("Errore.");
+    }
+  }
+
+  mostraContatoreChiamate() {
+    return ` aggiungiChilometri è stato chiamato ${this.#contatoreChiamate} volte.`;
+  }
+}
+
+class Automobile {
+  constructor() {
+      this.#contatoreChiamate = 0; // Contatore privato
+  }
+
+  #contatoreChiamate; // Variabile privata per contare le chiamate
+
+  #incrementaContatore() {
+      this.#contatoreChiamate++; // Incrementa il contatore
+  }
+
+  aggiungiChilometri(km) {
+      if (km > 0) {
+          this.#incrementaContatore(); // Aggiorna il contatore
+          return `Chilometri aggiunti: ${km}`;
+      } else {
+          return "Errore: aggiungi un valore positivo.";
+      }
+  }
+
+  mostraContatoreChiamate() {
+      return `Il metodo aggiungiChilometri è stato chiamato ${this.#contatoreChiamate} volte.`;
+  }
+}
+
