@@ -380,7 +380,7 @@ mostraContatoreChiamate() {
 get chilometraggio() {
   return this._chilometraggio;
 }
-*/
+
 
 
 class Automobile {
@@ -468,3 +468,65 @@ class Automobile {
   }
 }
 
+
+class Automobile {
+  constructor(marca, modello, anno, chilometraggio = 0) {
+      this.marca = marca;               // Marca dell'automobile
+      this.modello = modello;           // Modello dell'automobile
+      this.anno = anno;                 // Anno di fabbricazione
+      this._chilometraggio = chilometraggio; // Chilometraggio iniziale
+  }
+
+  // Getter per la proprietà chilometraggio
+  get chilometraggio() {
+      return this._chilometraggio; // Restituisce il valore del chilometraggio
+  }
+
+  // Metodo per aggiungere chilometri
+  aggiungiChilometri(km) {
+      if (km > 0) {
+          this._chilometraggio += km; // Incrementa il chilometraggio
+          return `Sono stati aggiunti ${km} km. Chilometraggio attuale: ${this._chilometraggio} km.`;
+      } else {
+          return "Errore: i chilometri aggiunti devono essere un valore positivo.";
+      }
+  }
+}
+
+// Creazione di un'istanza della classe Automobile
+const miaAuto = new Automobile("Fiat", "Panda", 2015);
+
+// Collegamento al DOM
+const chilometriForm = document.getElementById("chilometriForm");
+const chilometraggioCorrente = document.getElementById("chilometraggioCorrente");
+
+// Gestione dell'evento submit sul form
+chilometriForm.addEventListener("submit", (e) => {
+  e.preventDefault(); // Previene il comportamento predefinito del form
+  const chilometriInput = document.getElementById("chilometri");
+  const chilometriDaAggiungere = parseInt(chilometriInput.value);
+
+  // Aggiungi chilometri e aggiorna il DOM
+  const risultato = miaAuto.aggiungiChilometri(chilometriDaAggiungere);
+  alert(risultato); // Mostra un alert con il risultato
+  chilometraggioCorrente.textContent = `Chilometraggio attuale: ${miaAuto.chilometraggio} km`; // Aggiorna il chilometraggio
+  chilometriInput.value = ""; // Resetta il campo di input
+});
+*/
+ 
+
+  class Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0) {
+        this.marca = marca;               // Marca dell'automobile
+        this.modello = modello;           // Modello dell'automobile
+        this.anno = anno;                 // Anno di fabbricazione
+        this._chilometraggio = chilometraggio; // Chilometraggio iniziale
+        this.newchilometraggio = newchilometraggio
+    } 
+}
+descrizione() {
+  return `Questa è una ${this.marca} ${this.modello} del ${this.anno}. Chilometraggio attuale: ${this.newchilometraggio} km.`;
+}
+    get.newchilometraggio(150000){
+      console.log(this.newchilometraggio)
+  }
