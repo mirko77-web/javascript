@@ -530,3 +530,11 @@ descrizione() {
     get.newchilometraggio(150000){
       console.log(this.newchilometraggio)
   }
+
+  set chilometraggio(newChilometraggio) {
+    if (newChilometraggio >= this._chilometraggio) {
+        this.chilometraggio = newChilometraggio;
+    } else {
+        console.log("Errore: Il nuovo chilometraggio non può essere inferiore al valore corrente!");
+    }
+}
