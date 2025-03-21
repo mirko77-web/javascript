@@ -521,8 +521,13 @@ chilometriForm.addEventListener("submit", (e) => {
         this.modello = modello;           // Modello dell'automobile
         this.anno = anno;                 // Anno di fabbricazione
         this._chilometraggio = chilometraggio; // Chilometraggio iniziale
-        this.newchilometraggio = newchilometraggio
+        this.newchilometraggio = newchilometraggio;
     } 
+
+    const camion = new Automobile;
+    
+
+
 }
 descrizione() {
   return `Questa è una ${this.marca} ${this.modello} del ${this.anno}. Chilometraggio attuale: ${this.newchilometraggio} km.`;
