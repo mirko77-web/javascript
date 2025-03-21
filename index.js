@@ -543,7 +543,27 @@ chilometriForm.addEventListener("submit", (e) => {
         }
       }
     }
-    
+    static verificaIstanza(obj, classe) {
+      if (obj instanceof classe) {
+          return `L'oggetto è un'istanza della classe ${classe.name}.`;
+      } else {
+          return `L'oggetto NON è un'istanza della classe ${classe.name}.`;
+      }
+  }
+}
+ 
+const miaAutomobile = new Automobile("jeep", "renegade", 2017, 15000);
+const mioCamion = new Camion("Mercedes", "Actros", 2018, 100000, 5000, 20000);
+
+
+console.log(miaAutomobile instanceof Automobile); 
+console.log(mioCamion instanceof Camion);         
+console.log(mioCamion instanceof Automobile);     
+
+
+console.log(Automobile.verificaIstanza(miaAutomobile, Automobile)); 
+console.log(Automobile.verificaIstanza(mioCamion, Camion));         
+console.log(Automobile.verificaIstanza(mioCamion, Automobile));     
 
 
 
