@@ -615,3 +615,9 @@ const person = {
 };
 let {firstName, lastName} = person;
 console.log (person)
+
+const { firstName: nomeUtente, age: anni } = person;
+
+
+console.log("Nome utente:", nomeUtente); 
+console.log("Anni:", anni);            
