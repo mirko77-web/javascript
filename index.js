@@ -524,7 +524,24 @@ chilometriForm.addEventListener("submit", (e) => {
         this.newchilometraggio = newchilometraggio;
     } 
     class Camion extends Automobile {
-      
+      constructor(marca, modello, anno, chilometraggio = 0, capacitaCarico = 0, caricoMassimo = 0) {
+        super(marca, modello, anno, chilometraggio); 
+        this.capacitaCarico = capacitaCarico;      
+        this.caricoMassimo = caricoMassimo;      
+      }
+    
+      descrizione() {
+        return `${this.marca} ${this.modello} (${this.anno}) - Chilometraggio: ${this.chilometraggio} km, Carico attuale: ${this.capacitaCarico} kg, Carico massimo: ${this.caricoMassimo} kg.`;
+      }
+    
+      carica(kg) {
+        if (this.capacitaCarico + kg <= this.caricoMassimo) {
+          this.capacitaCarico += kg;
+          console.log(`Carico aggiunto: ${kg} kg. Carico attuale: ${this.capacitaCarico} kg.`);
+        } else {
+          console.log(`Errore: Non è possibile aggiungere ${kg} kg. Supererebbe il carico massimo di ${this.caricoMassimo} kg!`);
+        }
+      }
     }
 
 
