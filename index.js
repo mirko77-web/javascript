@@ -512,7 +512,7 @@ chilometriForm.addEventListener("submit", (e) => {
   chilometraggioCorrente.textContent = `Chilometraggio attuale: ${miaAuto.chilometraggio} km`; // Aggiorna il chilometraggio
   chilometriInput.value = ""; // Resetta il campo di input
 });
-*/
+
  
 
   class Automobile {
@@ -567,7 +567,7 @@ console.log(Automobile.verificaIstanza(mioCamion, Automobile));
 
 
 
-}
+
 descrizione() {
   return `Questa è una ${this.marca} ${this.modello} del ${this.anno}. Chilometraggio attuale: ${this.newchilometraggio} km.`;
 }
@@ -582,3 +582,10 @@ descrizione() {
         console.log("Errore: Il nuovo chilometraggio non può essere inferiore al valore corrente!");
     }
 }
+*/
+
+const numeri = [10, 20, 30, 40, 50];
+const [primo, secondo] = numeri;
+
+console.log("Primo elemento:", primo);  
+console.log("Secondo elemento:", secondo); 
