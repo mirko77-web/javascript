@@ -588,12 +588,23 @@ const numeri = [10, 20, 30, 40, 50];
 const [primo, secondo] = numeri;
 
 console.log("Primo elemento:", primo);  
-console.log("Secondo elemento:", secondo); */
-
+console.log("Secondo elemento:", secondo); 
 
 const numeri = [10, 20, 30, 40, 50];
 
 const [primo, , terzo] = numeri; // Si salta il secondo elemento utilizzando una virgola vuota
 
 console.log("Primo elemento:", primo);  // Output: Primo elemento: 10
-console.log("Terzo elemento:", terzo);  // Output: Terzo elemento: 30
+console.log("Terzo elemento:", terzo);  // Output: Terzo elemento: 30*/
+
+const numeri = [10, 20, 30];
+
+
+const [primo = 0, secondo = 0, terzo = 0, quarto = 0, quinto = 0] = numeri;
+
+
+console.log("Primo elemento:", primo); 
+console.log("Secondo elemento:", secondo); 
+console.log("Terzo elemento:", terzo);  
+console.log("Quarto elemento:", quarto);  
+console.log("Quinto elemento:", quinto);  
