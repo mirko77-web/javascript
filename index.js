@@ -523,9 +523,10 @@ chilometriForm.addEventListener("submit", (e) => {
         this._chilometraggio = chilometraggio; // Chilometraggio iniziale
         this.newchilometraggio = newchilometraggio;
     } 
+    class Camion extends Automobile {
+      
+    }
 
-    const camion = new Automobile;
-    
 
 
 }
