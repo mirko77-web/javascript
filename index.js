@@ -606,7 +606,7 @@ console.log("Primo elemento:", primo);
 console.log("Secondo elemento:", secondo); 
 console.log("Terzo elemento:", terzo);  
 console.log("Quarto elemento:", quarto);  
-console.log("Quinto elemento:", quinto);  */
+console.log("Quinto elemento:", quinto);  
 
 const person = {
   firstName: "mirko",
@@ -620,4 +620,17 @@ const { firstName: nomeUtente, age: anni } = person;
 
 
 console.log("Nome utente:", nomeUtente); 
-console.log("Anni:", anni);            
+console.log("Anni:", anni); 
+*/
+
+const persona = {
+  nome: "Giulia",
+  eta: 25
+};
+
+const { nome, cognome = "Non specificato", eta, professione = "Non specificata" } = persona;
+
+console.log("Nome:", nome);          
+console.log("Cognome:", cognome);    
+console.log("Età:", eta);           
+console.log("Professione:", professione); 
