@@ -665,7 +665,7 @@ function somma(...numeri) {
 console.log(somma(1, 2, 3));       
 console.log(somma(10, 20, 30, 40)); 
 console.log(somma(5));            
-console.log(somma());             */
+console.log(somma());          
 
 const numeri = [1,2,3,4,5]
 const [a,b, ...rest] = numeri
@@ -673,3 +673,19 @@ const [a,b, ...rest] = numeri
 console.log("Primo elemento:", a); 
 console.log("Secondo elemento:", b); 
 console.log("Resto degli elementi:", rest); 
+
+   */
+ 
+const persona = {
+  nome: "Luca",
+  cognome: "Bianchi",
+  eta: 28,
+  professione: "Designer",
+  città: "Roma"
+};
+
+const { nome, eta, ...resto } = persona;
+
+console.log("Nome:", nome);          
+console.log("Età:", eta);            
+console.log("Resto delle proprietà:", resto); 
