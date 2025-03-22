@@ -652,7 +652,7 @@ const newMycar = {
 }
 
 const newmycar = {...mycar, ...newMycar};
-console.log(newmycar);*/
+console.log(newmycar);
 
 
 
@@ -665,4 +665,11 @@ function somma(...numeri) {
 console.log(somma(1, 2, 3));       
 console.log(somma(10, 20, 30, 40)); 
 console.log(somma(5));            
-console.log(somma());             
+console.log(somma());             */
+
+const numeri = [1,2,3,4,5]
+const [a,b, ...rest] = numeri
+
+console.log("Primo elemento:", a); 
+console.log("Secondo elemento:", b); 
+console.log("Resto degli elementi:", rest); 
