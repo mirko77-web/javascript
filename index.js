@@ -621,7 +621,6 @@ const { firstName: nomeUtente, age: anni } = person;
 
 console.log("Nome utente:", nomeUtente); 
 console.log("Anni:", anni); 
-*/
 
 const persona = {
   nome: "Giulia",
@@ -634,3 +633,8 @@ console.log("Nome:", nome);
 console.log("Cognome:", cognome);    
 console.log("Età:", eta);           
 console.log("Professione:", professione); 
+*/
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+console.log(numbersCombined)
