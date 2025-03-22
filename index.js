@@ -637,7 +637,7 @@ console.log("Professione:", professione);
 const numbersOne = [1, 2, 3];
 const numbersTwo = [4, 5, 6];
 const numbersCombined = [...numbersOne, ...numbersTwo];
-console.log(numbersCombined)*/
+console.log(numbersCombined)
 
 const mycar = {
   brand: 'jeep',
@@ -652,4 +652,17 @@ const newMycar = {
 }
 
 const newmycar = {...mycar, ...newMycar};
-console.log(newmycar);
+console.log(newmycar);*/
+
+
+
+// Definizione della funzione
+function somma(...numeri) {
+  
+  return numeri.reduce((accumulatore, numero) => accumulatore + numero, 0);
+}
+
+console.log(somma(1, 2, 3));       
+console.log(somma(10, 20, 30, 40)); 
+console.log(somma(5));            
+console.log(somma());             
