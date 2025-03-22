@@ -633,8 +633,23 @@ console.log("Nome:", nome);
 console.log("Cognome:", cognome);    
 console.log("Età:", eta);           
 console.log("Professione:", professione); 
-*/
+
 const numbersOne = [1, 2, 3];
 const numbersTwo = [4, 5, 6];
 const numbersCombined = [...numbersOne, ...numbersTwo];
-console.log(numbersCombined)
+console.log(numbersCombined)*/
+
+const mycar = {
+  brand: 'jeep',
+  model: 'renegade',
+  color: 'red'
+}
+
+const newMycar = {
+  type: 'car',
+  year: 2021, 
+  color: 'black'
+}
+
+const newmycar = {...mycar, ...newMycar};
+console.log(newmycar);
