@@ -978,7 +978,7 @@ function eseguiDivisione(dividendo, divisore) {
 
 eseguiDivisione(10, 2); 
 eseguiDivisione(10, 0); 
-*/
+
 
 //Gestione di più tipi di errori//
 
@@ -1000,3 +1000,24 @@ function operaSuStringa(input) {
     }
   }
 }
+*/
+//Uso di finally per eseguire codice indipendentemente dal risultato//
+
+function eseguiDivisione(dividendo, divisore) {
+  try {
+    if (divisore === 0) {
+      throw new Error("Errore: il divisore non può essere zero!");
+    }
+    const risultato = dividendo / divisore;
+    console.log(`Risultato della divisione: ${risultato}`);
+  } catch (errore) {
+
+    console.error(errore.message);
+  } finally {
+
+    console.log("Operazione completata.");
+  }
+}
+
+eseguiDivisione(10, 2); 
+eseguiDivisione(10, 0); 
