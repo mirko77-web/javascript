@@ -849,3 +849,26 @@ const persona = {
 
 const descrizione = descriviPersona(persona);
 console.log(descrizione);
+
+//utilizzare3 console.log//
+
+
+const numero = 42;                    
+const stringa = "Ciao, mondo!";        
+const array = [1, 2, 3, 4, 5];          
+const oggetto = {                       
+  nome: "mirko",
+  cognome: "prisciano",
+  eta: 31
+};
+
+console.log("Numero:", numero);
+console.log("Stringa:", stringa);
+console.log("Array:", array);
+console.log("Oggetto:", oggetto);
+console.log("Booleano:", valoreBooleano);
+console.log("Null:", valoreNull);
+console.log("Undefined:", valoreNonDefinito);
+
+
+console.log(`Il mio nome è: ${oggetto.nome} ${oggetto.cognome}, e la mia età è ${oggetto.eta}.`);
