@@ -1042,7 +1042,9 @@ function stampaRisultatoSomma(risultato) {
 }
 eseguiOperazione(5, 7, stampaRisultatoSomma);
 
-*/
+
+
+//Funzione con callback e passaggio di parametri//
 
 function eseguiOperazioneECallback(a, b, callback) {
 
@@ -1063,3 +1065,36 @@ function moltiplicaRisultato(risultato) {
 
 eseguiOperazioneECallback(5, 2, moltiplicaRisultato);
 
+*/
+
+// Callback annidati//
+function operazione1(valore, callback) {
+  const risultato1 = valore * 5; 
+  console.log(`Risultato della prima operazione: ${risultato1}`);
+  
+
+  if (typeof callback === "function") {
+    callback(risultato1);
+  }
+}
+
+
+function operazione2(valore, callback) {
+  const risultato2 = valore + 10; // Esempio di operazione: aggiunge 10
+  console.log(`Risultato della seconda operazione: ${risultato2}`);
+  
+ 
+  if (typeof callback === "function") {
+    callback(risultato2);
+  }
+}
+
+function eseguiOperazioni() {
+  operazione1(5, (risultato1) => {
+    operazione2(risultato1, (risultato2) => {
+      console.log(`Risultato finale: ${risultato2}`);
+    });
+  });
+}
+
+eseguiOperazioni();
