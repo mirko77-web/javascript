@@ -958,7 +958,7 @@ setTimeout(() => {
   clearInterval(intervallo); 
   console.log("Intervallo interrotto dopo 5 secondi.");
 }, 5000);
-*/
+
 
 //Gestione di un errore semplice//
 
@@ -978,3 +978,25 @@ function eseguiDivisione(dividendo, divisore) {
 
 eseguiDivisione(10, 2); 
 eseguiDivisione(10, 0); 
+*/
+
+//Gestione di più tipi di errori//
+
+function operaSuStringa(input) {
+  try {
+
+    if (typeof input !== "string") {
+      throw new TypeError("Errore di tipo: il valore fornito non è una stringa!");
+    }
+
+    const risultato = input.toUpperCase();
+    console.log(`Risultato dell'operazione: ${risultato}`);
+
+  } catch (errore) {
+    if (errore instanceof TypeError) {
+      console.error(`Tipo di errore: ${errore.message}`);
+    } else {
+      console.error(`Errore generico: ${errore.message}`);
+    }
+  }
+}
