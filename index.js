@@ -771,7 +771,7 @@ const stringaJSON = JSON.stringify(persona);
 
 console.log("Stringa JSON:", stringaJSON);
 
-*/
+
 //Conversione di una stringa JSON in un oggetto//
 
 
@@ -783,3 +783,22 @@ console.log("Oggetto JavaScript:", oggettoJS);
 
 console.log("Nome:", oggettoJS.nome);
 console.log("Età:", oggettoJS.eta); 
+*/
+//manipolazione dei dati json//
+
+const stringaJSON = `[
+  { "nome": "Mario", "cognome": "Rossi", "eta": 30 },
+  { "nome": "Giulia", "cognome": "Bianchi", "eta": 28 },
+  { "nome": "Luca", "cognome": "Verdi", "eta": 42 }
+]`;
+
+
+const listaPersone = JSON.parse(stringaJSON);
+
+const nuovaPersona = { nome: "Anna", cognome: "Neri", eta: 30 };
+listaPersone.push(nuovaPersona);
+
+
+const stringaJSONAggiornata = JSON.stringify(listaPersone, null, 2);
+
+console.log("Stringa JSON aggiornata:\n", stringaJSONAggiornata);
