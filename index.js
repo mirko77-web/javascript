@@ -674,7 +674,7 @@ console.log("Primo elemento:", a);
 console.log("Secondo elemento:", b); 
 console.log("Resto degli elementi:", rest); 
 
-   */
+  
  
 const persona = {
   nome: "Luca",
@@ -689,3 +689,85 @@ const { nome, eta, ...resto } = persona;
 console.log("Nome:", nome);          
 console.log("Età:", eta);            
 console.log("Resto delle proprietà:", resto); 
+ 
+//per creare un pulsante e la risposta con codice html //
+function myFunction() {
+  let age = document.getElementById("age").value;
+  let voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
+
+
+//per creare una risposta alla funzione che vogliamo //
+const hours = new Date().getHours();
+if (hours<18) {
+  risposta = "buongiorno";
+} else{
+  risposta= "buonsera"
+}
+console.log (risposta)
+
+//per  cercare il giorni della settimana di oggi //
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+console.log (day)
+ 
+const cars = ["bmw", "jeep", "lancia", "opel", "mercedes"]
+let text = "";
+for (let i=0; i <cars.length; i++ ){
+  text +=cars [i]+"<br>";
+}
+console.log(cars)
+
+//per sapere quanti anni ha la macchina /
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+
+  }
+  age() {
+    const date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+const myCar = new Car("Ford", 2014);*/
+
+//Conversione di un oggetto in una stringa JSON Dichiarare un oggetto JavaScript e utilizzare il metodo JSON.stringify 
+// per convertirlo in una stringa JSON. Stampare la stringa JSON nella console.//
+
+// Dichiarazione di un oggetto JavaScript
+const persona = {
+  nome: "mario",
+  cognome: "Rossi",
+  eta: 30,
+  professione: "Ingegnere",
+  hobbies: ["lettura", "calcio", "programmazione"]
+};
+
+const stringaJSON = JSON.stringify(persona);
+
+console.log("Stringa JSON:", stringaJSON);
+
