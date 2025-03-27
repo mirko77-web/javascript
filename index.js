@@ -783,7 +783,7 @@ console.log("Oggetto JavaScript:", oggettoJS);
 
 console.log("Nome:", oggettoJS.nome);
 console.log("Età:", oggettoJS.eta); 
-*/
+
 //manipolazione dei dati json//
 
 const stringaJSON = `[
@@ -802,3 +802,15 @@ listaPersone.push(nuovaPersona);
 const stringaJSONAggiornata = JSON.stringify(listaPersone, null, 2);
 
 console.log("Stringa JSON aggiornata:\n", stringaJSONAggiornata);
+*/
+
+//stringa semplice con template literals//
+
+
+const nome = "Mario";
+const cognome = "Rossi";
+
+
+const stringaCompleta = `Il mio nome è: ${nome} ${cognome}`;
+
+console.log(stringaCompleta);
