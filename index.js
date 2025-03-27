@@ -802,7 +802,7 @@ listaPersone.push(nuovaPersona);
 const stringaJSONAggiornata = JSON.stringify(listaPersone, null, 2);
 
 console.log("Stringa JSON aggiornata:\n", stringaJSONAggiornata);
-*/
+
 
 //stringa semplice con template literals//
 
@@ -814,3 +814,19 @@ const cognome = "Rossi";
 const stringaCompleta = `Il mio nome è: ${nome} ${cognome}`;
 
 console.log(stringaCompleta);
+*/
+//Stringa multilinea con template literals//
+
+const nome = "giovanni";
+const cognome = "Neri";
+const eta = 30;
+const citta = "lecce";
+
+const stringaMultilinea = `
+Nome: ${nome}
+Cognome: ${cognome}
+Età: ${eta}
+Città: ${citta}
+`;
+
+console.log("Informazioni sulla persona:\n", stringaMultilinea);
