@@ -934,7 +934,7 @@ function stampaMessaggio() {
   console.log("ciao a tutti!");
 }
 
-setTimeout(stampaMessaggio, 3000); //appare dopo 3 secondi */
+setTimeout(stampaMessaggio, 3000); //appare dopo 3 secondi 
 
 //Utilizzare setInterval//
 
@@ -943,3 +943,18 @@ function stampaMessaggio() {
 }
 
 setInterval(stampaMessaggio, 2000);  //Questo messaggio appare ogni 2 secondi
+*/
+
+//clear intervall//
+
+function stampaMessaggio() {
+  console.log("ciao mondo!");
+}
+
+const intervallo = setInterval(stampaMessaggio, 1000);
+
+
+setTimeout(() => {
+  clearInterval(intervallo); 
+  console.log("Intervallo interrotto dopo 5 secondi.");
+}, 5000);
