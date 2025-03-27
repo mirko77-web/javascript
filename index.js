@@ -1065,7 +1065,7 @@ function moltiplicaRisultato(risultato) {
 
 eseguiOperazioneECallback(5, 2, moltiplicaRisultato);
 
-*/
+
 
 // Callback annidati//
 function operazione1(valore, callback) {
@@ -1098,3 +1098,18 @@ function eseguiOperazioni() {
 }
 
 eseguiOperazioni();
+*/
+
+//creare una promessa semplice//
+
+function promessaSemplice() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("cia a tutti!");
+    }, 2000);
+  });
+}
+
+promessaSemplice().then((messaggio) => {
+  console.log(messaggio);
+});
