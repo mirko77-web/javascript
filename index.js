@@ -829,7 +829,7 @@ Età: ${eta}
 Città: ${citta}
 `;
 
-console.log("Informazioni sulla persona:\n", stringaMultilinea);*/
+console.log("Informazioni sulla persona:\n", stringaMultilinea);
 
 //Funzione e template literals//
 
@@ -869,3 +869,29 @@ console.log("Oggetto:", oggetto);
 
 
 console.log(`Il mio nome è: ${oggetto.nome} ${oggetto.cognome}, e la mia età è ${oggetto.eta}.`);
+
+
+//Utilizzare console.error e console.warn//
+
+const statoSistema = "avviso"; 
+
+if (statoSistema === "errore") {
+  console.error("Errore critico: il sistema non può continuare!");
+} else if (statoSistema === "avviso") {
+  console.warn("Avviso: il sistema sta operando in modo non ottimale.");
+} else {
+  console.log("Il sistema funziona correttamente.");
+}
+
+//esempio 2//
+
+const statoSistema = "errore"; 
+
+if (statoSistema === "errore") {
+  console.error("Errore critico: il sistema non può continuare!");
+} else if (statoSistema === "avviso") {
+  console.warn("Avviso: il sistema sta operando in modo non ottimale.");
+} else {
+  console.log("Il sistema funziona correttamente.");
+}
+*/
