@@ -926,7 +926,7 @@ persone.forEach(persona => {
   console.groupEnd();
 });
 console.groupEnd();
-*/
+
 
 //Utilizzare setTimeout//
 
@@ -934,4 +934,12 @@ function stampaMessaggio() {
   console.log("ciao a tutti!");
 }
 
-setTimeout(stampaMessaggio, 3000); //appare dopo 3 secondi 
+setTimeout(stampaMessaggio, 3000); //appare dopo 3 secondi */
+
+//Utilizzare setInterval//
+
+function stampaMessaggio() {
+  console.log("ciao mondo!");
+}
+
+setInterval(stampaMessaggio, 2000);  //Questo messaggio appare ogni 2 secondi
