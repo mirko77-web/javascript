@@ -943,7 +943,7 @@ function stampaMessaggio() {
 }
 
 setInterval(stampaMessaggio, 2000);  //Questo messaggio appare ogni 2 secondi
-*/
+
 
 //clear intervall//
 
@@ -958,3 +958,23 @@ setTimeout(() => {
   clearInterval(intervallo); 
   console.log("Intervallo interrotto dopo 5 secondi.");
 }, 5000);
+*/
+
+//Gestione di un errore semplice//
+
+function eseguiDivisione(dividendo, divisore) {
+  try {
+    if (divisore === 0) {
+      throw new Error("Errore: il divisore non può essere zero!");
+    }
+
+    const risultato = dividendo / divisore;
+    console.log(`Risultato della divisione: ${risultato}`);
+  } catch (errore) {
+   
+    console.error(errore.message);
+  }
+}
+
+eseguiDivisione(10, 2); 
+eseguiDivisione(10, 0); 
