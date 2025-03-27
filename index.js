@@ -866,9 +866,6 @@ console.log("Numero:", numero);
 console.log("Stringa:", stringa);
 console.log("Array:", array);
 console.log("Oggetto:", oggetto);
-console.log("Booleano:", valoreBooleano);
-console.log("Null:", valoreNull);
-console.log("Undefined:", valoreNonDefinito);
 
 
 console.log(`Il mio nome è: ${oggetto.nome} ${oggetto.cognome}, e la mia età è ${oggetto.eta}.`);
