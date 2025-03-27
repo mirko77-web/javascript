@@ -895,3 +895,34 @@ if (statoSistema === "errore") {
   console.log("Il sistema funziona correttamente.");
 }
 */
+
+//Utilizzare console.table e console.group//
+
+
+const persone = [
+  { nome: "Mario", cognome: "Rossi", eta: 30 },
+  { nome: "Giulia", cognome: "Bianchi", eta: 20 },
+  { nome: "Luca", cognome: "Verdi", eta: 50 }
+];
+
+
+console.log("Stampa dell'array in formato tabella:");
+console.table(persone);
+
+
+console.group("Dettagli del sistema");
+console.log("Sistema operativo: Windows 11");
+console.log("Browser: Google Chrome");
+console.log("Versione: 2025");
+console.groupEnd();
+
+
+console.group("Controllo utenti");
+persone.forEach(persona => {
+  console.group(`${persona.nome} ${persona.cognome}`);
+  console.log(`Nome: ${persona.nome}`);
+  console.log(`Cognome: ${persona.cognome}`);
+  console.log(`Età: ${persona.eta}`);
+  console.groupEnd();
+});
+console.groupEnd();
