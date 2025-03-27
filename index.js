@@ -753,7 +753,7 @@ class Car {
   }
 }
 
-const myCar = new Car("Ford", 2014);*/
+const myCar = new Car("Ford", 2014);
 
 //Conversione di un oggetto in una stringa JSON Dichiarare un oggetto JavaScript e utilizzare il metodo JSON.stringify 
 // per convertirlo in una stringa JSON. Stampare la stringa JSON nella console.//
@@ -771,3 +771,15 @@ const stringaJSON = JSON.stringify(persona);
 
 console.log("Stringa JSON:", stringaJSON);
 
+*/
+//Conversione di una stringa JSON in un oggetto//
+
+
+const stringaJSON = '{"nome":"Mario","cognome":"Rossi","eta":30,"professione":"Ingegnere","hobbies":["lettura","calcio","programmazione"]}';
+
+const oggettoJS = JSON.parse(stringaJSON);
+
+console.log("Oggetto JavaScript:", oggettoJS);
+
+console.log("Nome:", oggettoJS.nome);
+console.log("Età:", oggettoJS.eta); 
