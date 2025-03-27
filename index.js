@@ -814,7 +814,7 @@ const cognome = "Rossi";
 const stringaCompleta = `Il mio nome è: ${nome} ${cognome}`;
 
 console.log(stringaCompleta);
-*/
+
 //Stringa multilinea con template literals//
 
 const nome = "giovanni";
@@ -829,4 +829,23 @@ Età: ${eta}
 Città: ${citta}
 `;
 
-console.log("Informazioni sulla persona:\n", stringaMultilinea);
+console.log("Informazioni sulla persona:\n", stringaMultilinea);*/
+
+//Funzione e template literals//
+
+function descriviPersona(persona) {
+  return `Nome: ${persona.nome}
+Cognome: ${persona.cognome}
+Età: ${persona.eta} anni
+Città: ${persona.citta}`;
+}
+
+const persona = {
+  nome: "mario",
+  cognome: "Neri",
+  eta: 30,
+  citta: "lecce"
+};
+
+const descrizione = descriviPersona(persona);
+console.log(descrizione);
