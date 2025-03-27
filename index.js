@@ -894,7 +894,7 @@ if (statoSistema === "errore") {
 } else {
   console.log("Il sistema funziona correttamente.");
 }
-*/
+
 
 //Utilizzare console.table e console.group//
 
@@ -926,3 +926,12 @@ persone.forEach(persona => {
   console.groupEnd();
 });
 console.groupEnd();
+*/
+
+//Utilizzare setTimeout//
+
+function stampaMessaggio() {
+  console.log("ciao a tutti!");
+}
+
+setTimeout(stampaMessaggio, 3000); //appare dopo 3 secondi 
