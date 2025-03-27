@@ -1000,7 +1000,7 @@ function operaSuStringa(input) {
     }
   }
 }
-*/
+
 //Uso di finally per eseguire codice indipendentemente dal risultato//
 
 function eseguiDivisione(dividendo, divisore) {
@@ -1020,4 +1020,26 @@ function eseguiDivisione(dividendo, divisore) {
 }
 
 eseguiDivisione(10, 2); 
-eseguiDivisione(10, 0); 
+eseguiDivisione(10, 0); */
+
+//Funzione di base con callback//
+
+
+function eseguiOperazione(a, b, callback) {
+
+  const risultato = a + b;
+  console.log(`Il risultato della somma è: ${risultato}`);
+
+  if (typeof callback === "function") {
+    callback(risultato);
+  } else {
+    console.error("Errore: il parametro non è una funzione.");
+  }
+}
+
+function stampaRisultatoSomma(risultato) {
+  console.log(`Il callback ha ricevuto il risultato: ${risultato}`);
+}
+eseguiOperazione(5, 7, stampaRisultatoSomma);
+
+
