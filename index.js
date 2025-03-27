@@ -1020,7 +1020,7 @@ function eseguiDivisione(dividendo, divisore) {
 }
 
 eseguiDivisione(10, 2); 
-eseguiDivisione(10, 0); */
+eseguiDivisione(10, 0); 
 
 //Funzione di base con callback//
 
@@ -1042,4 +1042,24 @@ function stampaRisultatoSomma(risultato) {
 }
 eseguiOperazione(5, 7, stampaRisultatoSomma);
 
+*/
+
+function eseguiOperazioneECallback(a, b, callback) {
+
+  const risultato = a + b;
+  console.log(`Il risultato dell'operazione è: ${risultato}`);
+
+  if (typeof callback === "function") {
+    callback(risultato);
+  } else {
+    console.error("Errore");
+  }
+}
+
+function moltiplicaRisultato(risultato) {
+  const moltiplicazione = risultato * 2;
+  console.log(`Il risultato moltiplicato per 2 è: ${moltiplicazione}`);
+}
+
+eseguiOperazioneECallback(5, 2, moltiplicaRisultato);
 
