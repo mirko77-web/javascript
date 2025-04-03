@@ -1386,7 +1386,7 @@ Promise.race([promessaLenta(), promessaVeloce()])
   .catch((errore) => {
       console.error(`Errore nella promessa: ${errore}`);
   });
-*/
+
 
 //promise allsettled
 const myPromise1 = new Promise ((resolve,reject) => {
@@ -1408,3 +1408,22 @@ promise.allSettled = new Promise ((resolve, reject) => {
 Promise.allSettled([myPromise1,myPromise2,myPromise3]).then((results) => 
   results.forEach((x) => myDisplay (x.status)),
 );
+*/
+
+
+// Funzione asincrona che utilizza await
+
+function promessa() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve("risolta con successo dopo 2 secondi!");
+      }, 2000);
+  });
+}
+async function funzioneAsincrona() {
+  console.log("Attendo la risoluzione della domanda...");
+  const messaggio = await promessa(); 
+  console.log(messaggio); 
+}
+
+funzioneAsincrona();
