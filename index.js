@@ -1201,7 +1201,7 @@ generaNumero()
       console.error(`Errore: ${errore}`);
   });
   
-  */
+
 // Catena di promesse con condizioni
 
   function generaNumero() {
@@ -1228,3 +1228,36 @@ generaNumero()
     .catch((errore) => {
         console.error(`Errore nella catena: ${errore}`);
     });
+  */
+ 
+ //catene di promesse con gestione degli errori
+   
+    function casualePromessa() {
+      return new Promise((resolve, reject) => {
+          const valoreCasuale = Math.random(); // Genera un numero casuale 
+          console.log(`Valore casuale generato: ${valoreCasuale}`); // Per vedere il valore casuale
+  
+          if (valoreCasuale > 0.5) {
+              resolve(valoreCasuale); // Risolve la promessa con il valore casuale
+          } else {
+              reject("Errore: il valore casuale è troppo basso."); // Rifiuta la promessa
+          }
+      });
+  }
+  
+  casualePromessa()
+      .then((risultato) => {
+          console.log(`Promessa risolta con valore: ${risultato}`);
+          return risultato * 2; // Moltiplica il valore per 2
+      })
+      .then((valoreManipolato) => {
+          console.log(`Valore manipolato: ${valoreManipolato}`);
+          return valoreManipolato + 10; // Aggiunge 10 al valore
+      })
+      .then((valoreFinale) => {
+          console.log(`Risultato finale: ${valoreFinale}`);
+      })
+      .catch((errore) => {
+          console.error(errore); // Gestisce l'errore e lo stampa
+      });
+  
