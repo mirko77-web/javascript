@@ -1328,7 +1328,7 @@ generaNumero()
                 console.error(`Gestione errore: ${errore}`); // Gestisce qualsiasi errore nella catena
             });
         
-           */
+         
 // Utilizzo di Promise.all 
             // Funzione 1
 function primaPromessa() {
@@ -1357,4 +1357,32 @@ Promise.all([primaPromessa(), secondaPromessa()])
   })
   .catch((errore) => {
       console.error(`Errore: ${errore}`); 
+  });
+  */
+
+//promise race
+
+function promessaLenta() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve("Promessa lenta risolta dopo 3 secondi");
+      }, 3000);
+  });
+}
+
+
+function promessaVeloce() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve("Promessa veloce risolta dopo 1 secondo");
+      }, 1000);
+  });
+}
+
+Promise.race([promessaLenta(), promessaVeloce()])
+  .then((risultato) => {
+      console.log(`La prima promessa risolta è: ${risultato}`);
+  })
+  .catch((errore) => {
+      console.error(`Errore nella promessa: ${errore}`);
   });
