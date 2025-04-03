@@ -1358,7 +1358,7 @@ Promise.all([primaPromessa(), secondaPromessa()])
   .catch((errore) => {
       console.error(`Errore: ${errore}`); 
   });
-  */
+  
 
 //promise race
 
@@ -1386,3 +1386,25 @@ Promise.race([promessaLenta(), promessaVeloce()])
   .catch((errore) => {
       console.error(`Errore nella promessa: ${errore}`);
   });
+*/
+
+//promise allsettled
+const myPromise1 = new Promise ((resolve,reject) => {
+  settTimeout (resolve, 200, "king");
+
+});
+
+const myPromise2 = new Promise ((resolve, reject) => {
+  setyTimeout (resolve, 100, "Queen");
+});
+
+const myPromise3 = new Promise ((resolve,reject) => {
+  setTimeout (resolve, 50, soldati);
+});
+
+promise.allSettled = new Promise ((resolve, reject) => {
+  setTimeout (resolve, 100, "Queen");
+});
+Promise.allSettled([myPromise1,myPromise2,myPromise3]).then((results) => 
+  results.forEach((x) => myDisplay (x.status)),
+);
