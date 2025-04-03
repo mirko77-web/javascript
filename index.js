@@ -1228,8 +1228,7 @@ generaNumero()
     .catch((errore) => {
         console.error(`Errore nella catena: ${errore}`);
     });
-  */
- 
+
  //catene di promesse con gestione degli errori
    
     function casualePromessa() {
@@ -1260,4 +1259,20 @@ generaNumero()
       .catch((errore) => {
           console.error(errore); // Gestisce l'errore e lo stampa
       });
-  
+    */
+ 
+
+      function generaErrore() {
+        return new Promise((resolve, reject) => {
+            reject("Errore: la promessa è stata rifiutata!");
+        });
+    }
+    
+    generaErrore()
+        .then((messaggio) => {
+            console.log(messaggio); 
+        })
+        .catch((errore) => {
+            console.error(errore); 
+        });
+    
