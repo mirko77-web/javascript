@@ -1113,7 +1113,7 @@ function promessaSemplice() {
 promessaSemplice().then((messaggio) => {
   console.log(messaggio);
 });
-*/
+
 
 function verificaNumero(numero) {
   return new Promise((resolve, reject) => {
@@ -1132,4 +1132,37 @@ verificaNumero(-5)
   })
   .catch((errore) => {
       console.error(errore);
+  });
+
+  function operazioneAsincrona(valore) {
+    return new Promise((resolve, reject) => {
+        if (valore > 0) {
+            resolve(`Operazione completata con successo: il valore ${valore} è positivo.`);
+        } else {
+            reject(`Errore: il valore ${valore} è negativo o uguale a zero.`);
+        }
+    });
+}
+*/
+// Utilizzo della promessa con finally
+
+function operazioneAsincrona(valore) {
+  return new Promise((resolve, reject) => {
+      if (valore > 0) {
+          resolve(`Operazione completata con successo: il valore ${valore} è positivo.`);
+      } else {
+          reject(`Errore: il valore ${valore} è negativo o uguale a zero.`);
+      }
+  });
+}
+
+operazioneAsincrona(-5)
+  .then((messaggio) => {
+      console.log(messaggio); 
+  })
+  .catch((errore) => {
+      console.error(errore); 
+  })
+  .finally(() => {
+      console.log("L'operazione asincrona è terminata."); 
   });
