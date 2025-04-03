@@ -1098,7 +1098,7 @@ function eseguiOperazioni() {
 }
 
 eseguiOperazioni();
-*/
+
 
 //creare una promessa semplice//
 
@@ -1113,3 +1113,23 @@ function promessaSemplice() {
 promessaSemplice().then((messaggio) => {
   console.log(messaggio);
 });
+*/
+
+function verificaNumero(numero) {
+  return new Promise((resolve, reject) => {
+      if (numero > 0) {
+          resolve(`Il numero ${numero} è valido!`);
+      } else {
+          reject(`Errore: il numero ${numero} non è valido.`);
+      }
+  });
+}
+
+// Utilizzo della promessa con gestione di catch
+verificaNumero(-5)
+  .then((messaggio) => {
+      console.log(messaggio);
+  })
+  .catch((errore) => {
+      console.error(errore);
+  });
