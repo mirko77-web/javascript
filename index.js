@@ -1143,7 +1143,7 @@ verificaNumero(-5)
         }
     });
 }
-*/
+
 // Utilizzo della promessa con finally
 
 function operazioneAsincrona(valore) {
@@ -1165,4 +1165,38 @@ operazioneAsincrona(-5)
   })
   .finally(() => {
       console.log("L'operazione asincrona è terminata."); 
+  });
+
+  function generaNumero() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(5); // Dopo 1 secondo restituisce il numero 5
+        }, 1000);
+    });
+}
+*/
+
+//catena di promesse semplici
+function generaNumero() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve(5);
+      }, 1000);
+  });
+}
+
+generaNumero()
+  .then((numero) => {
+      console.log(`Numero iniziale: ${numero}`);
+      return numero * 2; 
+  })
+  .then((numeroMoltiplicato) => {
+      console.log(`Dopo la moltiplicazione: ${numeroMoltiplicato}`);
+      return numeroMoltiplicato + 3;
+  })
+  .then((risultatoFinale) => {
+      console.log(`Risultato finale: ${risultatoFinale}`);
+  })
+  .catch((errore) => {
+      console.error(`Errore: ${errore}`);
   });
