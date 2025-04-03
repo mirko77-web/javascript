@@ -1294,7 +1294,7 @@ generaNumero()
           })
           .catch((errore) => {
               console.error(`Errore: ${errore}`); // Caso di errore
-          });     */
+          });     
 //Gestione degli errori in una catena di promesse
           function generaPromessa() {
             return new Promise((resolve, reject) => {
@@ -1328,4 +1328,33 @@ generaNumero()
                 console.error(`Gestione errore: ${errore}`); // Gestisce qualsiasi errore nella catena
             });
         
-           
+           */
+// Utilizzo di Promise.all 
+            // Funzione 1
+function primaPromessa() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve("Prima promessa risolta dopo 2 secondi");
+      }, 2000);
+  });
+}
+
+// Funzione 2
+function secondaPromessa() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve("Seconda promessa risolta dopo 4 secondi");
+      }, 4000);
+  });
+}
+
+
+Promise.all([primaPromessa(), secondaPromessa()])
+  .then((risultati) => {
+      console.log("Tutte le promesse sono risolte:");
+      console.log(risultati[0]); // Risultato della prima promessa
+      console.log(risultati[1]); // Risultato della seconda promessa
+  })
+  .catch((errore) => {
+      console.error(`Errore: ${errore}`); 
+  });
