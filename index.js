@@ -1408,7 +1408,7 @@ promise.allSettled = new Promise ((resolve, reject) => {
 Promise.allSettled([myPromise1,myPromise2,myPromise3]).then((results) => 
   results.forEach((x) => myDisplay (x.status)),
 );
-*/
+
 
 
 // Funzione asincrona che utilizza await
@@ -1427,3 +1427,25 @@ async function funzioneAsincrona() {
 }
 
 funzioneAsincrona();
+*/
+
+// gestione degli errori con try e catch
+function promessaCondizionale(condizione) {
+  return new Promise((resolve, reject) => {
+      if (condizione) {
+          resolve("Promessa risolta con successo!");
+      } else {
+          reject("Errore: la promessa è stata rifiutata.");
+      }
+  });
+}
+
+async function gestisciPromessa(condizione) {
+  try {
+      console.log("Attesa della promessa...");
+      const risultato = await promessaCondizionale(condizione); 
+      console.log(risultato); 
+  } catch (errore) {
+      console.error(`Gestione errore: ${errore}`); 
+  }
+}
