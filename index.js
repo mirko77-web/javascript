@@ -1274,7 +1274,7 @@ generaNumero()
         .catch((errore) => {
             console.error(errore); 
         });
-     */
+
  
 
         //Gestione degli errori con then e catch
@@ -1294,4 +1294,38 @@ generaNumero()
           })
           .catch((errore) => {
               console.error(`Errore: ${errore}`); // Caso di errore
-          });
+          });     */
+//Gestione degli errori in una catena di promesse
+          function generaPromessa() {
+            return new Promise((resolve, reject) => {
+                const valoreCasuale = Math.random(); // Genera un numero casuale tra 0 e 1
+                console.log(`Valore casuale: ${valoreCasuale}`);
+        
+                if (valoreCasuale > 0.3) {
+                    resolve(valoreCasuale); // Risolve la promessa se il valore > 0.3
+                } else {
+                    reject("Errore: il valore casuale è troppo basso."); // Rifiuta la promessa altrimenti
+                }
+            });
+        }
+        
+        generaPromessa()
+            .then((risultato) => {
+                console.log(`Promessa risolta con valore: ${risultato}`);
+                return risultato * 10; // Moltiplica il valore per 10
+            })
+            .then((valoreManipolato) => {
+                console.log(`Valore manipolato: ${valoreManipolato}`);
+                if (valoreManipolato > 5) {
+                    throw new Error("Errore: il valore manipolato è troppo alto!"); // Genera un errore
+                }
+                return valoreManipolato + 5; // Aggiunge 5 se non ci sono errori
+            })
+            .then((valoreFinale) => {
+                console.log(`Risultato finale: ${valoreFinale}`);
+            })
+            .catch((errore) => {
+                console.error(`Gestione errore: ${errore}`); // Gestisce qualsiasi errore nella catena
+            });
+        
+           
