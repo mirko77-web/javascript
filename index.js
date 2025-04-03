@@ -1259,8 +1259,7 @@ generaNumero()
       .catch((errore) => {
           console.error(errore); // Gestisce l'errore e lo stampa
       });
-    */
- 
+   
 
       function generaErrore() {
         return new Promise((resolve, reject) => {
@@ -1275,4 +1274,24 @@ generaNumero()
         .catch((errore) => {
             console.error(errore); 
         });
-    
+     */
+ 
+
+        //Gestione degli errori con then e catch
+        function promessaConCondizione(condizione) {
+          return new Promise((resolve, reject) => {
+              if (condizione) {
+                  resolve("La promessa è stata risolta con successo!");
+              } else {
+                  reject("La promessa è stata rifiutata a causa della condizione.");
+              }
+          });
+      }
+      
+      promessaConCondizione(true) 
+          .then((messaggio) => {
+              console.log(`Successo: ${messaggio}`); // Caso di successo
+          })
+          .catch((errore) => {
+              console.error(`Errore: ${errore}`); // Caso di errore
+          });
