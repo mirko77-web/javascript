@@ -1174,7 +1174,7 @@ operazioneAsincrona(-5)
         }, 1000);
     });
 }
-*/
+
 
 //catena di promesse semplici
 function generaNumero() {
@@ -1200,3 +1200,31 @@ generaNumero()
   .catch((errore) => {
       console.error(`Errore: ${errore}`);
   });
+  
+  */
+// Catena di promesse con condizioni
+
+  function generaNumero() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const numero = Math.floor(Math.random() * 100); // Genera un numero casuale tra 0 e 99
+            resolve(numero);
+        }, 1000); // Simula un'attesa di 1 secondo
+    });
+}
+
+generaNumero()
+    .then((numero) => {
+        console.log(`Numero generato: ${numero}`);
+        if (numero % 2 === 0) {
+            return numero * 2; // Se pari, moltiplica per 2
+        } else {
+            return numero + 1; // Se dispari, aggiungi 1
+        }
+    })
+    .then((numeroManipolato) => {
+        console.log(`Risultato finale: ${numeroManipolato}`);
+    })
+    .catch((errore) => {
+        console.error(`Errore nella catena: ${errore}`);
+    });
