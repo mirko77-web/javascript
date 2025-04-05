@@ -1449,7 +1449,7 @@ async function gestisciPromessa(condizione) {
       console.error(`Gestione errore: ${errore}`); 
   }
 }
-*/
+
 
 //funzioni asincrone in serie 
 async function funzioneAsincrona1() {
@@ -1480,3 +1480,41 @@ async function eseguiFunzioniInSerie() {
   console.log("Esecuzione completata!");
 }
 eseguiFunzioniInSerie();
+
+async function eseguiRichiestaGET() {
+  const url = "https://jsonplaceholder.typicode.com/posts"; 
+
+  try {
+      console.log("Eseguendo la richiesta GET...");
+      const risposta = await fetch(url); // Esegue la richiesta GET
+      if (!risposta.ok) {
+          throw new Error(`Errore nella richiesta: ${risposta.status}`);
+      }
+      const dati = await risposta.json(); // Converte la risposta in formato JSON
+      console.log("Dati ricevuti:", dati); // Stampa i dati nella console
+  } catch (errore) {
+      console.error("Errore durante la richiesta:", errore); // Gestisce eventuali errori
+  }
+}
+;
+*/
+
+  //eseguiRichiestaGET semplice
+async function eseguiRichiestaGET() {
+  const url = "https://jsonplaceholder.typicode.com/users"; 
+
+  try {
+      console.log("Eseguendo la richiesta GET...");
+      const risposta = await fetch(url); 
+      if (!risposta.ok) {
+          throw new Error(`Errore HTTP: ${risposta.status}`); 
+      }
+      const dati = await risposta.json(); 
+      console.log("Dati ricevuti:", dati); 
+  } catch (errore) {
+      console.error("Errore durante la richiesta:", errore); 
+  }
+}
+
+
+eseguiRichiestaGET();
