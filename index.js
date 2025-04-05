@@ -1427,7 +1427,7 @@ async function funzioneAsincrona() {
 }
 
 funzioneAsincrona();
-*/
+
 
 // gestione degli errori con try e catch
 function promessaCondizionale(condizione) {
@@ -1449,3 +1449,34 @@ async function gestisciPromessa(condizione) {
       console.error(`Gestione errore: ${errore}`); 
   }
 }
+*/
+
+//funzioni asincrone in serie 
+async function funzioneAsincrona1() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve("Risultato della funzione 1 dopo 2 secondi");
+      }, 2000);
+  });
+}
+
+async function funzioneAsincrona2() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve("Risultato della funzione 2 dopo 3 secondi");
+      }, 3000);
+  });
+}
+
+async function eseguiFunzioniInSerie() {
+  console.log("Inizio esecuzione delle funzioni in serie...");
+
+  const risultato1 = await funzioneAsincrona1();
+  console.log(risultato1); 
+
+  const risultato2 = await funzioneAsincrona2(); 
+  console.log(risultato2); 
+
+  console.log("Esecuzione completata!");
+}
+eseguiFunzioniInSerie();
