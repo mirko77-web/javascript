@@ -1497,7 +1497,7 @@ async function eseguiRichiestaGET() {
   }
 }
 ;
-*/
+
 
   //eseguiRichiestaGET semplice
 async function eseguiRichiestaGET() {
@@ -1518,3 +1518,35 @@ async function eseguiRichiestaGET() {
 
 
 eseguiRichiestaGET();
+*/
+//Eseguire una richiesta POST
+async function eseguiRichiestaPOST() {
+  const url = "https://jsonplaceholder.typicode.com/posts"; 
+  const dati = {
+      title: "Esempio Titolo",
+      body: "Questo è un esempio di contenuto.",
+      userId: 123,
+  };
+
+  try {
+      console.log("Eseguendo la richiesta POST...");
+      const risposta = await fetch(url, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json", 
+          },
+          body: JSON.stringify(dati), 
+      });
+
+      if (!risposta.ok) {
+          throw new Error(`Errore HTTP: ${risposta.status}`); 
+      }
+
+      const risultato = await risposta.json(); 
+      console.log("Dati restituiti dall'API:", risultato);
+  } catch (errore) {
+      console.error("Errore durante la richiesta POST:", errore); 
+  }
+}
+
+eseguiRichiestaPOST();
