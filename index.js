@@ -1572,8 +1572,8 @@ async function eseguiRichiestaGET() {
 
 
 eseguiRichiestaGET();
-*/
-//comprendere un errore cross
+
+//
 async function fetchData() {
   try {
       const risposta = await fetch("http://example.com");
@@ -1588,3 +1588,31 @@ fetchData();
 // Il server API (http://example.com) non include l'intestazione HTTP Access-Control-Allow-Origin,
 //  che autorizza richieste provenienti da domini diversi.I browser, per proteggere gli utenti, 
 // bloccano automaticamente tali richieste.
+// 
+// */
+
+
+//utilizzare proxy
+async function fetchDataConProxy() {
+  const proxyUrl = "https://cors-anywhere.herokuapp.com/"; 
+  const apiUrl = "http://example.com"; 
+
+  try {
+      console.log("Eseguendo la richiesta GET con proxy...");
+      const risposta = await fetch(proxyUrl + apiUrl, {
+          method: "GET",
+          headers: {
+              "X-Requested-With": "XMLHttpRequest", 
+          },
+      });
+      if (!risposta.ok) {
+          throw new Error(`Errore HTTP: ${risposta.status}`);
+      }
+      const dati = await risposta.json(); 
+      console.log("Dati ricevuti:", dati); 
+  } catch (errore) {
+      console.error("Errore durante la richiesta GET con proxy:", errore);
+  }
+}
+
+fetchDataConProxy();
