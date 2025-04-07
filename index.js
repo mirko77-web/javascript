@@ -1518,7 +1518,7 @@ async function eseguiRichiestaGET() {
 
 
 eseguiRichiestaGET();
-*/
+
 //Eseguire una richiesta POST
 async function eseguiRichiestaPOST() {
   const url = "https://jsonplaceholder.typicode.com/posts"; 
@@ -1550,3 +1550,26 @@ async function eseguiRichiestaPOST() {
 }
 
 eseguiRichiestaPOST();
+*/
+
+
+
+// Gestione degli errori con async e await
+async function eseguiRichiestaGET() {
+  const url = "https://jsonplaceholder.typicode.com/posts"; 
+
+  try {
+      console.log("Eseguendo la richiesta GET...");
+      const risposta = await fetch(url); 
+      if (!risposta.ok) {
+          throw new Error(`Errore HTTP: ${risposta.status}`); 
+      }
+      const dati = await risposta.json(); 
+      console.log("Dati ricevuti:", dati); 
+  } catch (errore) {
+      console.error("Errore durante la richiesta:", errore); 
+  }
+}
+
+
+eseguiRichiestaGET();
