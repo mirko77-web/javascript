@@ -1550,7 +1550,6 @@ async function eseguiRichiestaPOST() {
 }
 
 eseguiRichiestaPOST();
-*/
 
 
 
@@ -1573,3 +1572,19 @@ async function eseguiRichiestaGET() {
 
 
 eseguiRichiestaGET();
+*/
+//comprendere un errore cross
+async function fetchData() {
+  try {
+      const risposta = await fetch("http://example.com");
+      const dati = await risposta.json();
+      console.log(dati);
+  } catch (errore) {
+      console.error("Errore durante la fetch:", errore);
+  }
+}
+
+fetchData();
+// Il server API (http://example.com) non include l'intestazione HTTP Access-Control-Allow-Origin,
+//  che autorizza richieste provenienti da domini diversi.I browser, per proteggere gli utenti, 
+// bloccano automaticamente tali richieste.
