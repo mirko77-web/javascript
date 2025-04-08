@@ -1637,7 +1637,7 @@ async function fetchData() {
 }
 
 fetchData();
-*/
+
 
 // Funzione per salvare un cookie
 function salvaCookie(nome, valore, giorni) {
@@ -1668,4 +1668,29 @@ function recuperaCookie(nome) {
 function rimuoviCookie(nome) {
   document.cookie = `${nome}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
   console.log(`Cookie rimosso: ${nome}`);
+}*/
+
+//localstorage
+// Funzione per salvare un valore nel localStorage
+function salvaNelLocalStorage(chiave, valore) {
+    localStorage.setItem(chiave, valore); 
+    console.log(`Valore salvato: ${chiave} = ${valore}`);
+}
+
+// Funzione per recuperare un valore dal localStorage
+function recuperaDalLocalStorage(chiave) {
+    const valore = localStorage.getItem(chiave); 
+    if (valore) {
+        console.log(`Valore recuperato: ${chiave} = ${valore}`);
+        return valore;
+    } else {
+        console.log(`Valore non trovato per la chiave: ${chiave}`);
+        return null;
+    }
+}
+
+// Funzione per rimuovere un valore dal localStorage
+function rimuoviDalLocalStorage(chiave) {
+    localStorage.removeItem(chiave); 
+    console.log(`Valore rimosso per la chiave: ${chiave}`);
 }
