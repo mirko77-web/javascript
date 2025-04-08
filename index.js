@@ -1589,7 +1589,7 @@ fetchData();
 //  che autorizza richieste provenienti da domini diversi.I browser, per proteggere gli utenti, 
 // bloccano automaticamente tali richieste.
 // 
-// */
+// 
 
 
 //utilizzare proxy
@@ -1616,3 +1616,24 @@ async function fetchDataConProxy() {
 }
 
 fetchDataConProxy();
+*/
+
+//utilizza un api che supporta cors
+
+async function fetchData() {
+  const url = "https://jsonplaceholder.typicode.com/posts";
+
+  try {
+      console.log("Inviando una richiesta GET...");
+      const response = await fetch(url); 
+      if (!response.ok) {
+          throw new Error(`Errore HTTP: ${response.status}`);
+      }
+      const data = await response.json(); 
+      console.log("Dati ricevuti dall'API:", data); 
+  } catch (error) {
+      console.error("Errore durante la richiesta:", error); 
+  }
+}
+
+fetchData();
