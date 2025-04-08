@@ -1616,7 +1616,7 @@ async function fetchDataConProxy() {
 }
 
 fetchDataConProxy();
-*/
+
 
 //utilizza un api che supporta cors
 
@@ -1637,3 +1637,35 @@ async function fetchData() {
 }
 
 fetchData();
+*/
+
+// Funzione per salvare un cookie
+function salvaCookie(nome, valore, giorni) {
+  let data = new Date();
+  data.setTime(data.getTime() + (giorni * 24 * 60 * 60 * 1000)); // Scadenza in giorni
+  let scadenza = "expires=" + data.toUTCString();
+  document.cookie = `${nome}=${valore}; ${scadenza}; path=/`;
+  console.log(`Cookie salvato: ${nome}=${valore}`);
+}
+
+// Funzione per recuperare un cookie
+function recuperaCookie(nome) {
+  let nomeConUguale = nome + "=";
+  let cookieArray = document.cookie.split("; ");
+  for (let i = 0; i < cookieArray.length; i++) {
+      let cookie = cookieArray[i];
+      if (cookie.indexOf(nomeConUguale) === 0) {
+          let valore = cookie.substring(nomeConUguale.length, cookie.length);
+          console.log(`Cookie recuperato: ${nome}=${valore}`);
+          return valore;
+      }
+  }
+  console.log(`Cookie non trovato: ${nome}`);
+  return null;
+}
+
+// Funzione per rimuovere un cookie
+function rimuoviCookie(nome) {
+  document.cookie = `${nome}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+  console.log(`Cookie rimosso: ${nome}`);
+}
