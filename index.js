@@ -1668,7 +1668,7 @@ function recuperaCookie(nome) {
 function rimuoviCookie(nome) {
   document.cookie = `${nome}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
   console.log(`Cookie rimosso: ${nome}`);
-}*/
+}
 
 //localstorage
 // Funzione per salvare un valore nel localStorage
@@ -1693,4 +1693,28 @@ function recuperaDalLocalStorage(chiave) {
 function rimuoviDalLocalStorage(chiave) {
     localStorage.removeItem(chiave); 
     console.log(`Valore rimosso per la chiave: ${chiave}`);
+}*/
+
+// Funzione per salvare un valore nel sessionStorage
+function salvaNelSessionStorage(chiave, valore) {
+  sessionStorage.setItem(chiave, valore); 
+  console.log(`Valore salvato nel sessionStorage: ${chiave} = ${valore}`);
+}
+
+// Funzione per recuperare un valore dal sessionStorage
+function recuperaDalSessionStorage(chiave) {
+  const valore = sessionStorage.getItem(chiave); 
+  if (valore) {
+      console.log(`Valore recuperato dal sessionStorage: ${chiave} = ${valore}`);
+      return valore;
+  } else {
+      console.log(`Valore non trovato per la chiave: ${chiave}`);
+      return null;
+  }
+}
+
+// Funzione per rimuovere un valore dal sessionStorage
+function rimuoviDalSessionStorage(chiave) {
+  sessionStorage.removeItem(chiave); 
+  console.log(`Valore rimosso dal sessionStorage per la chiave: ${chiave}`);
 }
