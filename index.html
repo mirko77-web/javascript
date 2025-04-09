@@ -9,15 +9,24 @@
     <h1>Ciao</h1>
     <p id="testo">Ciao, questo è un paragrafo!</p>
     <button onclick="modificaTesto()">Modifica Testo</button>
+
+    <button id="myBtn">Aggiungi testo</button>
+    <p id="demo"></p>
+
     <script>
-      function modificaTesto() {
+        function modificaTesto() {
             const testo = document.getElementById("testo");
             testo.innerText = "Ora il testo è stato aggiornato!";
             testo.style.backgroundColor = "red";
             testo.style.fontSize = "40px";
+        }
 
+        const element = document.getElementById("myBtn");
+        element.addEventListener("click", myFunction1);
+
+        function myFunction1() {
+            document.getElementById("demo").innerHTML += "Il mio nome è... ";
         }
     </script>
 </body>
 </html>
-
