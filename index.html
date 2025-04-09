@@ -13,7 +13,25 @@
     <button id="myBtn">Aggiungi testo</button>
     <p id="demo"></p>
 
+    <button onclick="creaLista()">Crea Lista</button>
+    <div id="contenitore"></div>
+
     <script>
+          function creaLista() {
+            const lista = document.createElement("ul");
+
+            const elementi = ["Elemento 1", "Elemento 2", "Elemento 3", "Elemento 4"];
+
+            
+            elementi.forEach((testo) => {
+                const elementoLista = document.createElement("li");
+                elementoLista.innerText = testo;
+                lista.appendChild(elementoLista); 
+            });
+
+            
+            document.getElementById("contenitore").appendChild(lista);
+        }
         function modificaTesto() {
             const testo = document.getElementById("testo");
             testo.innerText = "Ora il testo è stato aggiornato!";
@@ -27,6 +45,7 @@
         function myFunction1() {
             document.getElementById("demo").innerHTML += "Il mio nome è... ";
         }
+        
     </script>
 </body>
 </html>
