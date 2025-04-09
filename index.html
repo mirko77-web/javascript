@@ -8,8 +8,12 @@
 <body>
     <h1>Ciao</h1>
     <p id="testo">Ciao, questo è un paragrafo!</p>
+    <button onclick="modificaTesto()">Modifica Testo</button>
     <script>
-    document.querySelector("p").style.backgroundColor = "red"
+      function modificaTesto() {
+            const testo = document.getElementById("testo");
+            testo.innerText = "Ora il testo è stato aggiornato!";
+        }
     </script>
 </body>
 </html>
