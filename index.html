@@ -6,10 +6,12 @@
     <title>Oggetto Document</title>
 </head>
 <body>
-    <h1>ciao</h1>
+    <h1>Ciao</h1>
     <p id="testo">Ciao, questo è un paragrafo!</p>
     <script>
-        console.log(document);
+        const paragrafo = document.getElementById("testo");
+        console.log(paragrafo.textContent);
     </script>
 </body>
 </html>
+
