@@ -1693,7 +1693,7 @@ function recuperaDalLocalStorage(chiave) {
 function rimuoviDalLocalStorage(chiave) {
     localStorage.removeItem(chiave); 
     console.log(`Valore rimosso per la chiave: ${chiave}`);
-}*/
+}
 
 // Funzione per salvare un valore nel sessionStorage
 function salvaNelSessionStorage(chiave, valore) {
@@ -1717,4 +1717,26 @@ function recuperaDalSessionStorage(chiave) {
 function rimuoviDalSessionStorage(chiave) {
   sessionStorage.removeItem(chiave); 
   console.log(`Valore rimosso dal sessionStorage per la chiave: ${chiave}`);
+}*/
+
+
+// Funzione per salvare i dati in localStorage e sessionStorage
+function saveData(key, value) {
+  localStorage.setItem(key, value);
+  sessionStorage.setItem(key, value);
+  console.log(`Salvato -> localStorage: ${localStorage.getItem(key)}, sessionStorage: ${sessionStorage.getItem(key)}`);
+}
+
+// Funzione per recuperare i dati
+function getData(key) {
+  const localData = localStorage.getItem(key);
+  const sessionData = sessionStorage.getItem(key);
+  console.log(`Recuperato -> localStorage: ${localData}, sessionStorage: ${sessionData}`);
+}
+
+// Funzione per rimuovere i dati
+function removeData(key) {
+  localStorage.removeItem(key);
+  sessionStorage.removeItem(key);
+  console.log(`Rimosso -> localStorage: ${localStorage.getItem(key)}, sessionStorage: ${sessionStorage.getItem(key)}`);
 }
