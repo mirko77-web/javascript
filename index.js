@@ -1717,7 +1717,7 @@ function recuperaDalSessionStorage(chiave) {
 function rimuoviDalSessionStorage(chiave) {
   sessionStorage.removeItem(chiave); 
   console.log(`Valore rimosso dal sessionStorage per la chiave: ${chiave}`);
-}*/
+}
 
 
 // Funzione per salvare i dati in localStorage e sessionStorage
@@ -1740,3 +1740,4 @@ function removeData(key) {
   sessionStorage.removeItem(key);
   console.log(`Rimosso -> localStorage: ${localStorage.getItem(key)}, sessionStorage: ${sessionStorage.getItem(key)}`);
 }
+*/
