@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,6 +31,8 @@
 
             
             document.getElementById("contenitore").appendChild(lista);
+
+
         }
         function modificaTesto() {
             const testo = document.getElementById("testo");
@@ -46,6 +48,40 @@
             document.getElementById("demo").innerHTML += "Il mio nome è... ";
         }
         
+    </script>
+</body>
+</html> -->
+
+
+<!--submit-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validazione Form</title>
+</head>
+<body>
+    <form id="mioForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome"><br><br>
+
+        <button type="submit">Invia</button>
+    </form>
+
+    <script>
+        document.getElementById("mioForm").addEventListener("submit", function(event) {
+            const nome = document.getElementById("nome").value.trim();
+            const cognome = document.getElementById("cognome").value.trim();
+
+            if (nome === "" || cognome === "") {
+                alert("Attenzione: tutti i campi devono essere compilati!");
+                event.preventDefault(); // Impedisce l'invio del form se i campi sono vuoti
+            }
+        });
     </script>
 </body>
 </html>
